@@ -1,5 +1,6 @@
 dataset/*/*imaging.nii.gz
 dataset/*/raw
+*.nii.gz
 *.pt
 *.npy
 *.npz
