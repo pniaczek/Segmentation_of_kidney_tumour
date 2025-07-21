@@ -1,0 +1,20 @@
+name: kits23-unet
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch>=2.0
+  - torchvision
+  - numpy
+  - nibabel
+  - scikit-image
+  - scipy
+  - tqdm
+  - matplotlib
+  - scikit-learn
+  - pip
+  - pip:
+      - monai
+      - tensorboard

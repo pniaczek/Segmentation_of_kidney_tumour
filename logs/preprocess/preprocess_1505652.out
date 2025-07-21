@@ -1,0 +1,2 @@
+/var/spool/slurmd/job1505652/slurm_script: line 16: cd: data: No such file or directory
+/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/bin/python: Error while finding module specification for 'preprocessing.py' (ModuleNotFoundError: No module named 'preprocessing'). Try using 'preprocessing' instead of 'preprocessing.py' as the module name.

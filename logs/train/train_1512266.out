@@ -1,0 +1,11 @@
+Using device: cuda
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/train_unet_3d.py", line 71, in <module>
+    main()
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/train_unet_3d.py", line 57, in main
+    train_loader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=4)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 376, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/utils/data/sampler.py", line 164, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0

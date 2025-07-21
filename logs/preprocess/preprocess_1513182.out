@@ -1,0 +1,15 @@
+Training:   0%|          | 0/196 [00:00<?, ?it/s]/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/kidney_segmentation.py:59: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  item = torch.load(self.files[idx])
+Training:   0%|          | 0/196 [00:07<?, ?it/s]
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/kidney_segmentation.py", line 116, in <module>
+    main()
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/kidney_segmentation.py", line 107, in main
+    loss = train_model(train_loader, model, optimizer, device)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/kidney_segmentation.py", line 75, in train_model
+    loss = dice_loss(pred, mask)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/kidney_segmentation.py", line 65, in dice_loss
+    return 1 - torch.tensor(official_dice(pred.cpu().numpy(), target.cpu().numpy()), dtype=torch.float32)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/evaluation/dice.py", line 8, in dice
+    intersection = np.count_nonzero(prediction & reference)
+TypeError: ufunc 'bitwise_and' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''

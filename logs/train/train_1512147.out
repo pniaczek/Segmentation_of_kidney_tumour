@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/kits23/models/train_unet_3d.py", line 5, in <module>
+    from kits23.models.unet3d import UNet3D
+ModuleNotFoundError: No module named 'kits23.models.unet3d'
