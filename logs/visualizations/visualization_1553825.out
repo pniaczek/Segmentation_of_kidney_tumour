@@ -1,0 +1,8 @@
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/models/3DUnet.py:77: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(device="cuda")
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/models/3DUnet.py", line 77, in <module>
+    scaler = GradScaler(device="cuda")
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/typing_extensions.py", line 2956, in wrapper
+    return arg(*args, **kwargs)
+TypeError: GradScaler.__init__() got an unexpected keyword argument 'device'

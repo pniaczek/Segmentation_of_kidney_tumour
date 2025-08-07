@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py", line 10, in <module>
+    from monai.data.nifti_writer import write_nifti
+ModuleNotFoundError: No module named 'monai.data.nifti_writer'

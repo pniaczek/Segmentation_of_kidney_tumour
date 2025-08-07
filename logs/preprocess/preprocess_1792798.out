@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/nibabel/loadsave.py", line 101, in load
+    stat_result = os.stat(filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augumented_dataset/case_00485_cropped_image.nii.gz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/train_test_split.py", line 46, in <module>
+    convert_and_save(train_cases, "train")
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/train_test_split.py", line 34, in convert_and_save
+    img = nib.load(image_path).get_fdata().astype("float32")
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/nibabel/loadsave.py", line 103, in load
+    raise FileNotFoundError(f"No such file or no access: '{filename}'")
+FileNotFoundError: No such file or no access: '/net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augumented_dataset/case_00485_cropped_image.nii.gz'

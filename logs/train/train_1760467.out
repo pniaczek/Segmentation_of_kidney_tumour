@@ -1,0 +1,4 @@
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train.py", line 4
+    from models.3dunet import UNet3D
+                ^
+SyntaxError: invalid decimal literal

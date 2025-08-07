@@ -1,0 +1,11 @@
+Processing /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augmented_data/train:   0%|          | 0/391 [00:00<?, ?it/s]/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py:53: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(file)
+Processing /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augmented_data/train:   0%|          | 0/391 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py", line 64, in <module>
+    augment_and_save(train_files, train_dir, train_transform)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py", line 54, in augment_and_save
+    image = ensure_ch_first(data["image"])
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/utility/array.py", line 204, in __call__
+    raise ValueError(msg)
+ValueError: Metadata not available and channel_dim=None, EnsureChannelFirst is not in use.

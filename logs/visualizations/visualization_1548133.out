@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits/models/dataset_cropping.py", line 11, in <module>
+    from kits.models.kidney_segmentation import UNet3D
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits/__init__.py", line 3, in <module>
+    from kits23._version import __VERSION__
+ModuleNotFoundError: No module named 'kits23'

@@ -1,0 +1,34 @@
+Processing /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augmented_data/train:   0%|          | 0/391 [00:00<?, ?it/s]/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py:51: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(file)  # <- można dodać weights_only=True jeśli ostrzeżenie przeszkadza
+Processing /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augmented_data/train:   0%|          | 0/391 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/transform.py", line 150, in apply_transform
+    return _apply_transform(transform, data, unpack_items, lazy, overrides, log_stats)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/transform.py", line 98, in _apply_transform
+    return transform(data, lazy=lazy) if isinstance(transform, LazyTrait) else transform(data)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/spatial/dictionary.py", line 1151, in __call__
+    grid = self.rand_affine.rand_affine_grid(sp_size, grid=grid, lazy=lazy_)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/spatial/array.py", line 1910, in __call__
+    _grid, self.affine = affine_grid(spatial_size, grid)  # type: ignore
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/spatial/array.py", line 1761, in __call__
+    affine @= create_rotate(spatial_dims, self.rotate_params, device=_device, backend=_b)  # type: ignore[assignment]
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/utils.py", line 887, in create_rotate
+    return _create_rotate(
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/utils.py", line 941, in _create_rotate
+    raise ValueError(f"Unsupported spatial_dims: {spatial_dims}, available options are [2, 3].")
+ValueError: Unsupported spatial_dims: 4, available options are [2, 3].
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py", line 64, in <module>
+    augment_and_save(train_files, train_dir, train_transform)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py", line 58, in augment_and_save
+    sample = transform(sample)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/compose.py", line 346, in __call__
+    result = execute_compose(
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/compose.py", line 116, in execute_compose
+    data = apply_transform(
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/transforms/transform.py", line 180, in apply_transform
+    raise RuntimeError(f"applying transform {transform}") from e
+RuntimeError: applying transform <monai.transforms.spatial.dictionary.RandAffined object at 0x14f19fc933d0>

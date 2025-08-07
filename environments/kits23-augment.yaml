@@ -1,0 +1,19 @@
+name: kits23-augment
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch>=2.0
+  - torchvision
+  
+  - numpy
+  - scikit-learn
+  - tqdm
+  - pip
+  - pip:
+      - monai
+      - nibabel             
+      - scikit-image        
+      - pillow 

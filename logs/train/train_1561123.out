@@ -1,0 +1,47 @@
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/models/3DUnet.py:124: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+Device: cuda
+GPU: NVIDIA A100-SXM4-40GB
+
+Counting voxels in 10 samples:   0%|          | 0/10 [00:00<?, ?it/s]/net/tscratch/people/plgmpniak/KITS_project/Kits_23/models/3DUnet.py:98: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  label = torch.load(path, map_location="cpu")["label"]  # shape: [D, H, W]
+
+Counting voxels in 10 samples:  10%|█         | 1/10 [00:00<00:03,  2.79it/s]
+Counting voxels in 10 samples:  20%|██        | 2/10 [00:00<00:02,  2.81it/s]
+Counting voxels in 10 samples:  30%|███       | 3/10 [00:00<00:02,  3.14it/s]
+Counting voxels in 10 samples:  40%|████      | 4/10 [00:01<00:01,  3.33it/s]
+Counting voxels in 10 samples:  50%|█████     | 5/10 [00:01<00:01,  3.45it/s]
+Counting voxels in 10 samples:  60%|██████    | 6/10 [00:01<00:01,  3.43it/s]
+Counting voxels in 10 samples:  70%|███████   | 7/10 [00:02<00:00,  3.43it/s]
+Counting voxels in 10 samples:  80%|████████  | 8/10 [00:02<00:00,  3.43it/s]
+Counting voxels in 10 samples:  90%|█████████ | 9/10 [00:02<00:00,  3.47it/s]
+Counting voxels in 10 samples: 100%|██████████| 10/10 [00:02<00:00,  3.53it/s]
+Counting voxels in 10 samples: 100%|██████████| 10/10 [00:02<00:00,  3.38it/s]
+[Partial] Class voxel counts: [214940320.0, 4681127.0, 526861.0, 52663.0]
+[Partial] Computed class weights: [0.0002204435004387051, 0.010121962986886501, 0.08993300795555115, 0.899724543094635]
+
+Training:   0%|          | 0/391 [00:00<?, ?it/s]/net/tscratch/people/plgmpniak/KITS_project/Kits_23/models/3DUnet.py:60: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path)
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/models/3DUnet.py:60: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path)
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/models/3DUnet.py:60: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path)
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/models/3DUnet.py:60: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path)
+
+Training:   0%|          | 1/391 [00:14<1:31:09, 14.03s/it]
+Training:   1%|          | 2/391 [00:14<40:01,  6.17s/it]  
+Training:   1%|          | 3/391 [00:15<23:43,  3.67s/it]
+Training:   1%|          | 4/391 [00:16<16:01,  2.49s/it]
+Training:   1%|▏         | 5/391 [00:27<35:40,  5.55s/it]
+Training:   2%|▏         | 6/391 [00:27<24:57,  3.89s/it]
+Training:   2%|▏         | 7/391 [00:28<18:09,  2.84s/it]
+Training:   2%|▏         | 8/391 [00:29<13:44,  2.15s/it]
+Training:   2%|▏         | 9/391 [00:41<33:36,  5.28s/it]
+Training:   3%|▎         | 10/391 [00:41<24:29,  3.86s/it]
+Training:   3%|▎         | 11/391 [00:42<18:16,  2.89s/it]
+Training:   3%|▎         | 12/391 [00:43<14:04,  2.23s/it]
+Training:   3%|▎         | 13/391 [00:54<30:59,  4.92s/it]
+Training:   4%|▎         | 14/391 [00:55<22:53,  3.64s/it]
+Training:   4%|▍         | 15/391 [00:55<17:14,  2.75s/it]
+Training:   4%|▍         | 16/391 [00:56<13:17,  2.13s/it]slurmstepd: error: *** JOB 1561123 ON t0015 CANCELLED AT 2025-07-25T10:44:47 DUE TO TIME LIMIT ***

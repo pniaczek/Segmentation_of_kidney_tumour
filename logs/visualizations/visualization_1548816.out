@@ -1,0 +1,5 @@
+Found 489 label files.
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/kits23/visualizations/distributions.py", line 32, in <module>
+    sum_per_class[c] += mask
+ValueError: operands could not be broadcast together with shapes (256,256,256) (64,256,256) (256,256,256) 

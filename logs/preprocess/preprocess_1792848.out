@@ -1,0 +1,4 @@
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/train_test_split.py", line 55
+    print(f"✅ Zapisano {len(train_ca_
+          ^
+SyntaxError: unterminated string literal (detected at line 55)

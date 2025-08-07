@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py", line 26, in <module>
+    EnsureChannelFirstd(keys=["image", "label"]),
+NameError: name 'EnsureChannelFirstd' is not defined. Did you mean: 'EnsureChannelFirst'?

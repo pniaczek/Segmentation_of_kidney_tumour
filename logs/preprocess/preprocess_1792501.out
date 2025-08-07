@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/preprocessing/data_augumentation.py", line 9, in <module>
+    from monai.data import DataLoader, Dataset, write_nifti
+ImportError: cannot import name 'write_nifti' from 'monai.data' (/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-augment/lib/python3.10/site-packages/monai/data/__init__.py)
