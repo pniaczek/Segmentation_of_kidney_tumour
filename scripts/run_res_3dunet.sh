@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=train_kits23
-#SBATCH --output=logs/train/train_%j.out
+#SBATCH --output=logs/train/resnet_train_%j.out
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
@@ -14,7 +14,6 @@ source ~/.bashrc
 conda activate kits23-unet
 
 cd $SLURM_SUBMIT_DIR
-
 cd /net/tscratch/people/plgmpniak/KITS_project/Kits_23
 
-python train/train_resUnet.py
+python -m train.train_resUnet

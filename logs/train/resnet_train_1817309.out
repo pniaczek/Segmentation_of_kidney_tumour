@@ -1,0 +1,33 @@
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+Epoch 0 [train]:   0%|          | 0/391 [00:00<?, ?it/s]/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py:30: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path, map_location="cpu")
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py:30: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path, map_location="cpu")
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py:30: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path, map_location="cpu")
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py:30: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  data = torch.load(path, map_location="cpu")
+                                                        Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_resUnet.py", line 69, in <module>
+    trainer.train_padded(num_epochs=num_epochs, pad_multiple=pad_multiple)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/trainer.py", line 157, in train_padded
+    train_loss = self.train_one_epoch_padded(multiple=pad_multiple)
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/trainer.py", line 103, in train_one_epoch_padded
+    loss = self.loss_fn(
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/losses/dice_loss.py", line 51, in bce_dice_loss_on_channels
+    bce = F.binary_cross_entropy_with_logits(logits_sel, targets_sel, pos_weight=pw)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/nn/functional.py", line 3628, in binary_cross_entropy_with_logits
+    return torch.binary_cross_entropy_with_logits(
+RuntimeError: The size of tensor a (3) must match the size of tensor b (336) at non-singleton dimension 4
+slurmstepd: error: *** JOB 1817309 ON t0010 CANCELLED AT 2025-08-14T10:09:26 ***

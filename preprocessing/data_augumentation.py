@@ -64,7 +64,6 @@ def get_transform_list(aug_config, output_dir, postfix):
                 std=params.get("std", 0.01),
             ))
 
-    # transform do zapisu NIfTI ze zintegrowanym backendem
     t.append(SaveImaged(
         keys=["image", "label"],
         output_dir=output_dir,

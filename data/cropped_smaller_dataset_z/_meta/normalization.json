@@ -1,0 +1,16 @@
+{
+  "clip": [
+    -80.0,
+    310.0
+  ],
+  "mean": -9.531760851542154,
+  "std": 88.67913910424305,
+  "ref_files": [
+    "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augumented_dataset/case_00000_cropped_image_aug00.nii.gz",
+    "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augumented_dataset/case_00000_cropped_image_aug01.nii.gz",
+    "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augumented_dataset/case_00000_cropped_image_aug02.nii.gz",
+    "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augumented_dataset/case_00000_cropped_image_aug03.nii.gz",
+    "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/augumented_dataset/case_00000_cropped_image_aug04.nii.gz"
+  ],
+  "n_vox": 110100480
+}

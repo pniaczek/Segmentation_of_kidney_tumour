@@ -1,0 +1,9 @@
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+slurmstepd: error: *** JOB 1816639 ON t0026 CANCELLED AT 2025-08-13T22:53:35 DUE TO TIME LIMIT ***

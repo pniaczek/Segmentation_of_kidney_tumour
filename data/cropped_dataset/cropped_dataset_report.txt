@@ -1,0 +1,492 @@
+name	shape	unique_labels	fgvox
+case_00000_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	874234
+case_00001_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1319385
+case_00002_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	637471
+case_00003_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	525556
+case_00004_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	118025
+case_00005_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	954983
+case_00006_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	241814
+case_00007_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	208273
+case_00008_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	542642
+case_00009_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	155786
+case_00010_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	208038
+case_00011_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	169106
+case_00012_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	195405
+case_00013_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	216226
+case_00014_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	441676
+case_00015_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	282632
+case_00016_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	383459
+case_00017_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	180223
+case_00018_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	245083
+case_00019_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	154008
+case_00020_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	118744
+case_00021_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	107948
+case_00022_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	976512
+case_00023_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	288643
+case_00024_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	199994
+case_00025_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	671312
+case_00026_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	489593
+case_00027_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	875699
+case_00028_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	232894
+case_00029_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	162893
+case_00030_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	641209
+case_00031_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	319013
+case_00032_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	186787
+case_00033_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	681545
+case_00034_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	175875
+case_00035_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	107915
+case_00036_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	342445
+case_00037_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	229397
+case_00038_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	190557
+case_00039_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	140872
+case_00040_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	312893
+case_00041_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	252430
+case_00042_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	2359923
+case_00043_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	225267
+case_00044_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	148318
+case_00045_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	162675
+case_00046_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	163428
+case_00047_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	145051
+case_00048_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	96013
+case_00049_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1000409
+case_00050_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	359270
+case_00051_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	204313
+case_00052_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1045237
+case_00053_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1109104
+case_00054_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	116738
+case_00055_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	224646
+case_00056_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	424275
+case_00057_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	221777
+case_00058_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	175539
+case_00059_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1072155
+case_00060_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	163410
+case_00061_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	147231
+case_00062_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	100603
+case_00063_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1315844
+case_00064_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	117061
+case_00065_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	298810
+case_00066_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	450272
+case_00067_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	2301467
+case_00068_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1367884
+case_00069_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	267359
+case_00070_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	323143
+case_00071_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1167487
+case_00072_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	372103
+case_00073_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	260914
+case_00074_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	167973
+case_00075_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	134091
+case_00076_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	135706
+case_00077_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	155473
+case_00078_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1430770
+case_00079_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	312537
+case_00080_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	167911
+case_00081_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	193467
+case_00082_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	163777
+case_00083_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	234227
+case_00084_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	400541
+case_00085_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	125361
+case_00086_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	338824
+case_00087_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	184952
+case_00088_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	579946
+case_00089_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	130534
+case_00090_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	175407
+case_00091_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1284442
+case_00092_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	369469
+case_00093_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1362435
+case_00094_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	251391
+case_00095_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	319549
+case_00096_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1232634
+case_00097_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	159274
+case_00098_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	721097
+case_00099_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	209252
+case_00100_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	439918
+case_00101_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1264977
+case_00102_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1475363
+case_00103_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	843146
+case_00104_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	135219
+case_00105_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	152987
+case_00106_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	165128
+case_00107_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	343653
+case_00108_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	200659
+case_00109_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	357135
+case_00110_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	115210
+case_00111_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	334340
+case_00112_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	486222
+case_00113_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	233704
+case_00114_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	2840832
+case_00115_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1139985
+case_00116_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1145950
+case_00117_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	360529
+case_00118_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1110158
+case_00119_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	264900
+case_00120_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	353809
+case_00121_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	107196
+case_00122_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	212651
+case_00123_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	375587
+case_00124_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	365044
+case_00125_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	171237
+case_00126_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	172858
+case_00127_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	180203
+case_00128_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	261296
+case_00129_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	149994
+case_00130_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	308345
+case_00131_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	321737
+case_00132_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1302311
+case_00133_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	191364
+case_00134_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	148589
+case_00135_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	2553546
+case_00136_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	169921
+case_00137_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	237235
+case_00138_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	309296
+case_00139_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	431045
+case_00140_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	722591
+case_00141_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1914947
+case_00142_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	655300
+case_00143_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	102378
+case_00144_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	279013
+case_00145_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	232350
+case_00146_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1877073
+case_00147_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	89112
+case_00148_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	135846
+case_00149_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	405089
+case_00150_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	365448
+case_00151_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1889295
+case_00152_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	150661
+case_00153_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	353602
+case_00154_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	863919
+case_00155_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1096325
+case_00156_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	942540
+case_00157_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1042049
+case_00158_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1270479
+case_00159_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1661502
+case_00160_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1718444
+case_00161_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	108783
+case_00162_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	154763
+case_00163_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	182966
+case_00164_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	163354
+case_00165_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	361179
+case_00166_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	281592
+case_00167_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	128225
+case_00168_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	94711
+case_00169_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	136516
+case_00170_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	226440
+case_00171_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	194321
+case_00172_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	316958
+case_00173_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	115092
+case_00174_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	164446
+case_00175_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	171000
+case_00176_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	125104
+case_00177_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	141820
+case_00178_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	179908
+case_00179_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	204931
+case_00180_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	285248
+case_00181_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	445561
+case_00182_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	123860
+case_00183_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	465802
+case_00184_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	224314
+case_00185_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	378296
+case_00186_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	271861
+case_00187_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	280349
+case_00188_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	746341
+case_00189_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	312756
+case_00190_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	351208
+case_00191_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	658368
+case_00192_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	441240
+case_00193_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	428810
+case_00194_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	131259
+case_00195_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	201158
+case_00196_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	246417
+case_00197_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	269109
+case_00198_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	311593
+case_00199_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	433957
+case_00200_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	255161
+case_00201_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	385393
+case_00202_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	468399
+case_00203_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	447662
+case_00204_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	224888
+case_00205_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	104827
+case_00206_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	96662
+case_00207_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	167644
+case_00208_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	99664
+case_00209_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	153754
+case_00210_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	193164
+case_00211_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	564886
+case_00212_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	255154
+case_00213_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	486216
+case_00214_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	509467
+case_00215_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	107973
+case_00216_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1552553
+case_00217_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	231450
+case_00218_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	216181
+case_00219_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	331801
+case_00220_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	249510
+case_00221_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	328872
+case_00222_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	234088
+case_00223_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	433820
+case_00224_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	188371
+case_00225_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	175359
+case_00226_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	187040
+case_00227_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	188194
+case_00228_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	362474
+case_00229_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	546529
+case_00230_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	173303
+case_00231_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	232150
+case_00232_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	167826
+case_00233_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	593219
+case_00234_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	251710
+case_00235_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	340184
+case_00236_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	247812
+case_00237_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	245879
+case_00238_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	148409
+case_00239_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	175565
+case_00240_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	281536
+case_00241_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	207043
+case_00242_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	124328
+case_00243_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	134801
+case_00244_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	463327
+case_00245_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	383921
+case_00246_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1036319
+case_00247_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	120206
+case_00248_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	217502
+case_00249_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	862915
+case_00250_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	301854
+case_00251_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	157019
+case_00252_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	180014
+case_00253_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	700911
+case_00254_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	954349
+case_00255_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	253957
+case_00256_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	156499
+case_00257_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	156039
+case_00258_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	254519
+case_00259_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	125976
+case_00260_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	125357
+case_00261_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1053584
+case_00262_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	466612
+case_00263_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	2073844
+case_00264_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	542783
+case_00265_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	165199
+case_00266_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	133638
+case_00267_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	159866
+case_00268_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1403935
+case_00269_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	103067
+case_00270_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	190340
+case_00271_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1907423
+case_00272_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	677477
+case_00273_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	564575
+case_00274_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	274123
+case_00275_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	154477
+case_00276_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1092103
+case_00277_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	128314
+case_00278_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	567109
+case_00279_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	393677
+case_00280_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	310280
+case_00281_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	775462
+case_00282_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	261977
+case_00283_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	920837
+case_00284_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	335484
+case_00285_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	175704
+case_00286_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	262525
+case_00287_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	261298
+case_00288_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	601767
+case_00289_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	142307
+case_00290_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1049157
+case_00291_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	174308
+case_00292_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	481112
+case_00293_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1768342
+case_00294_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	923508
+case_00295_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1216004
+case_00296_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	149105
+case_00297_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	116649
+case_00298_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1759995
+case_00299_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	942377
+case_00400_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	78958
+case_00401_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	138820
+case_00402_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	90637
+case_00403_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	97210
+case_00404_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	157118
+case_00405_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	373552
+case_00406_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	92892
+case_00407_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	118517
+case_00408_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	360202
+case_00409_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	226985
+case_00410_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	111172
+case_00411_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	149946
+case_00412_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	149368
+case_00413_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	158229
+case_00414_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	172321
+case_00415_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	309335
+case_00416_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	148468
+case_00417_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	195315
+case_00418_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	309956
+case_00419_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	323926
+case_00420_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	182674
+case_00421_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	204883
+case_00422_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	129310
+case_00423_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	113515
+case_00424_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	171557
+case_00425_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	217117
+case_00426_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	228736
+case_00427_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	244465
+case_00428_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	173552
+case_00429_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	78108
+case_00430_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	844291
+case_00431_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	236820
+case_00432_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	355873
+case_00433_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	413150
+case_00434_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	160692
+case_00435_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	154773
+case_00436_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	137586
+case_00437_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	183555
+case_00438_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	180258
+case_00439_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	187208
+case_00440_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	107577
+case_00441_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	148421
+case_00442_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1061862
+case_00443_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	211818
+case_00444_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	212406
+case_00445_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	455616
+case_00446_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	127214
+case_00447_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	213942
+case_00448_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	262628
+case_00449_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	144314
+case_00450_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	201414
+case_00451_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	477425
+case_00452_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	108718
+case_00453_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	465010
+case_00454_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	176223
+case_00455_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	165333
+case_00456_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	157762
+case_00457_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	344641
+case_00458_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	111354
+case_00459_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	80183
+case_00460_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	155547
+case_00461_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	240207
+case_00462_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	140654
+case_00463_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	112431
+case_00464_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	86045
+case_00465_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	426060
+case_00466_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	95432
+case_00467_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	356824
+case_00468_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	284050
+case_00469_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	144010
+case_00470_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	154203
+case_00471_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	135577
+case_00472_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	255411
+case_00473_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	169195
+case_00474_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	249893
+case_00475_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	249182
+case_00476_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	185468
+case_00477_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	303082
+case_00478_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	218549
+case_00479_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	419647
+case_00480_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	413735
+case_00481_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	816849
+case_00482_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	942285
+case_00483_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	300403
+case_00484_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	88764
+case_00485_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	195926
+case_00486_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	201379
+case_00487_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	177026
+case_00488_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	255908
+case_00489_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	337629
+case_00490_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	193234
+case_00491_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	186745
+case_00492_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	216547
+case_00493_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	273916
+case_00494_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	125918
+case_00495_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	168415
+case_00496_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	163763
+case_00497_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	216211
+case_00498_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	145413
+case_00499_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	231262
+case_00500_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	261832
+case_00501_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	333313
+case_00502_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	312877
+case_00503_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	175890
+case_00504_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	461785
+case_00505_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	462430
+case_00506_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	148759
+case_00507_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	140578
+case_00508_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	122561
+case_00509_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	263371
+case_00510_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	946523
+case_00511_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	113414
+case_00512_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	141071
+case_00513_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	595413
+case_00514_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	610499
+case_00515_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	617965
+case_00516_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1682233
+case_00517_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	697728
+case_00518_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	218097
+case_00519_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	423030
+case_00520_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	146609
+case_00521_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	132282
+case_00522_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	181318
+case_00523_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	298886
+case_00524_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	128224
+case_00525_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	394586
+case_00526_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	637127
+case_00527_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	239167
+case_00528_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	558606
+case_00529_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	182567
+case_00530_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	475199
+case_00531_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	691787
+case_00532_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	296367
+case_00533_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	403127
+case_00534_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	113056
+case_00535_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	631845
+case_00536_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	171070
+case_00537_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	230160
+case_00538_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	941553
+case_00539_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	313794
+case_00540_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	186099
+case_00541_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	665926
+case_00542_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	745055
+case_00543_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	1858244
+case_00544_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	541193
+case_00545_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1506305
+case_00546_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	235201
+case_00547_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	236713
+case_00548_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	130270
+case_00549_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	128071
+case_00550_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	178691
+case_00551_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	346372
+case_00552_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	303960
+case_00553_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	893738
+case_00554_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	171249
+case_00555_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	442240
+case_00556_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	536352
+case_00557_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	306093
+case_00558_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	318915
+case_00559_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1324844
+case_00560_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	326701
+case_00561_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	1166811
+case_00562_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	597592
+case_00563_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	254823
+case_00564_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	777673
+case_00565_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	257113
+case_00566_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	190348
+case_00567_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	322787
+case_00568_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	465676
+case_00569_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	162125
+case_00570_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	187763
+case_00571_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	150311
+case_00572_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	4459291
+case_00573_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	301905
+case_00574_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	188411
+case_00575_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	331151
+case_00576_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	152188
+case_00577_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	423241
+case_00578_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	614678
+case_00579_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	252157
+case_00580_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	301452
+case_00581_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	98009
+case_00582_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	505331
+case_00583_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	720708
+case_00584_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	221988
+case_00585_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	274930
+case_00586_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	364717
+case_00587_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2, 3]	130251
+case_00588_cropped_image.nii.gz	(256, 256, 336)	[0, 1, 2]	554355
+
+[PROBLEMS]

@@ -1,18 +1,20 @@
+# models/unet3d.py
 import torch
 import torch.nn as nn
 
 class UNet3D(nn.Module):
-    def __init__(self, in_channels=1, out_channels=3):
+    def __init__(self, in_channels=1, out_channels=3, p_drop=0.10):
         super().__init__()
 
         def conv_block(in_ch, out_ch):
             return nn.Sequential(
                 nn.Conv3d(in_ch, out_ch, kernel_size=3, padding=1),
-                nn.BatchNorm3d(out_ch),
+                nn.InstanceNorm3d(out_ch, affine=True),
                 nn.ReLU(inplace=True),
                 nn.Conv3d(out_ch, out_ch, kernel_size=3, padding=1),
-                nn.BatchNorm3d(out_ch),
-                nn.ReLU(inplace=True)
+                nn.InstanceNorm3d(out_ch, affine=True),
+                nn.ReLU(inplace=True),
+                nn.Dropout3d(p=p_drop),
             )
 
         self.enc1 = conv_block(in_channels, 32)
@@ -34,8 +36,7 @@ class UNet3D(nn.Module):
     def forward(self, x):
         e1 = self.enc1(x)
         e2 = self.enc2(self.pool1(e1))
-        b = self.bottleneck(self.pool2(e2))
-
+        b  = self.bottleneck(self.pool2(e2))
         d2 = self.dec2(torch.cat([self.up2(b), e2], dim=1))
         d1 = self.dec1(torch.cat([self.up1(d2), e1], dim=1))
         return self.out(d1)

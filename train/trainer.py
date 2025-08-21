@@ -1,15 +1,22 @@
 import os
 import torch
+import torch.nn.functional as F
 from tqdm import tqdm
-from torch.cuda.amp import autocast, GradScaler
-from losses.dice_loss import weighted_multiclass_dice_loss, dice_per_class, adjusted_binary_dice
-from kits23.evaluation.dice import dice as official_dice
-
-import time  # u góry pliku, jeśli nie masz
+from torch.amp import autocast, GradScaler
+from losses.dice_loss import bce_dice_loss_on_channels, dice_mean_over_channels
 
 
+class RegionTrainer:
+    """
+    Region-based, multi-label trainer (3 channels):
+      ch0: kidney_and_masses (kidney ∪ tumor ∪ cyst)
+      ch1: masses            (tumor ∪ cyst)
+      ch2: tumor
 
-class Trainer:
+    Model head: out_channels=3 (logits), use sigmoid in metrics.
+    Loss: BCE-with-logits + Dice over the active channels (default: 0,1,2).
+    """
+
     def __init__(
         self,
         model,
@@ -17,11 +24,13 @@ class Trainer:
         val_loader,
         optimizer,
         device,
-        loss_fn=weighted_multiclass_dice_loss,
-        weights=None,
+        loss_fn=bce_dice_loss_on_channels,
         scheduler=None,
-        active_class_schedule=None,
         save_path=None,
+        val_every: int = 1,
+        save_every: int = 1,
+        amp_dtype: str = "bf16",   # "bf16" (A100) or "fp16"
+        active_channels=(0, 1, 2),
     ):
         self.model = model
         self.train_loader = train_loader
@@ -29,161 +38,136 @@ class Trainer:
         self.optimizer = optimizer
         self.device = device
         self.loss_fn = loss_fn
-        self.weights = weights
         self.scheduler = scheduler
-        self.active_class_schedule = active_class_schedule or {}
         self.save_path = save_path
-        self.scaler = GradScaler()
+        self.val_every = max(1, int(val_every))
+        self.save_every = max(1, int(save_every))
         self.epoch = 0
 
-    def get_active_classes(self):
-        return self.active_class_schedule.get(self.epoch, list(range(self.model.out.out_channels)))
+        self._amp_dtype = torch.bfloat16 if amp_dtype == "bf16" else torch.float16
+        self.scaler = GradScaler('cuda', enabled=True)
 
-    def train_one_epoch(self):
-        start_time = time.time()
+        # region channels to optimize/evaluate
+        self.active_channels = tuple(active_channels)
+
+        self.pos_weight = torch.tensor([1.0, 2.0, 3.0], device=self.device, dtype=torch.float32)
+
+        # best score
+        self.best_val_dice = -1.0
+
+    # --- helpers for padding to multiples of N (e.g., 8 for 3 downsamplings) ---
+    def _pad_to_multiple(self, x, multiple=8):
+        _, _, D, H, W = x.shape
+        pd = (multiple - D % multiple) % multiple
+        ph = (multiple - H % multiple) % multiple
+        pw = (multiple - W % multiple) % multiple
+        if pd or ph or pw:
+            x = F.pad(x, (0, pw, 0, ph, 0, pd))
+        return x, (D, H, W)
+
+    def _crop_to_size(self, y, size_dhw):
+        D, H, W = size_dhw
+        return y[..., :D, :H, :W]
+
+    def _to_device_3d(self, x):
+        try:
+            return x.to(self.device, non_blocking=True, memory_format=torch.channels_last_3d)
+        except AttributeError:
+            return x.to(self.device, non_blocking=True)
+
+    def _unpack_batch(self, batch):
+        # Expect (image, target3) or dict-like with keys
+        if isinstance(batch, (list, tuple)) and len(batch) >= 2:
+            return batch[0], batch[1]
+        elif isinstance(batch, dict):
+            return batch["image"], batch["mask"]
+        else:
+            raise ValueError("Unexpected batch format.")
+
+    def train_one_epoch_padded(self, multiple=8):
         self.model.train()
-        total_loss = 0.0
-        active_classes = self.get_active_classes()
+        running_loss = 0.0
 
-        for img, mask, *_ in tqdm(self.train_loader, desc=f"Training epoch {self.epoch}"):
-            img = img.to(self.device)
-            mask = mask.to(self.device)
+        for batch in tqdm(self.train_loader, desc=f"Epoch {self.epoch} [train]", leave=False):
+            inputs, targets3 = self._unpack_batch(batch)  # targets3: [B,3,D,H,W] (multi-label regions)
+            inputs   = self._to_device_3d(inputs)
+            targets3 = targets3.to(self.device, non_blocking=True).float()
 
-            self.optimizer.zero_grad()
-            with autocast():
-                pred = self.model(img)
-                loss = self.loss_fn(pred, mask, weights=self.weights, active_classes=active_classes)
+            inputs_pad, orig_size = self._pad_to_multiple(inputs, multiple=multiple)
+
+            self.optimizer.zero_grad(set_to_none=True)
+            with autocast('cuda', dtype=self._amp_dtype):
+                logits_pad = self.model(inputs_pad)  # [B,3,D,H,W]
+                logits3 = self._crop_to_size(logits_pad, orig_size)
+
+                loss = self.loss_fn(
+                    logits3, targets3,
+                    channels=self.active_channels,
+                    bce_w=1.0, dice_w=1.0,
+                    pos_weight=self.pos_weight, 
+                )
 
             self.scaler.scale(loss).backward()
             self.scaler.step(self.optimizer)
             self.scaler.update()
-            total_loss += loss.item()
 
-        # === TU ===
-        torch.cuda.synchronize()
-        duration = time.time() - start_time
-        print(f"[GPU] Max memory used: {torch.cuda.max_memory_allocated() / 1e9:.2f} GB")
-        print(f"[Time] Epoch duration: {duration:.2f} seconds")
+            running_loss += float(loss.item())
 
-        return total_loss / len(self.train_loader)
+        return running_loss / max(1, len(self.train_loader))
 
-    def validate(self):
+    @torch.no_grad()
+    def validate_padded(self, multiple=8):
+        torch.cuda.empty_cache()
         self.model.eval()
-        official_scores = []
-        all_class_dices = []
 
-        with torch.no_grad():
-            for img, mask, *_ in tqdm(self.val_loader, desc="Validating"):
-                img = img.to(self.device)
-                mask = mask.float().to(self.device)
+        running_dice = 0.0
+        n = 0
 
-                pred = self.model(img)
-                pred_soft = torch.softmax(pred, dim=1)
-                pred_np = torch.argmax(pred_soft, dim=1).cpu().numpy()
-                mask_np = torch.argmax(mask, dim=1).cpu().numpy()
+        for batch in tqdm(self.val_loader, desc="Validating (padded)", leave=False):
+            inputs, targets3 = self._unpack_batch(batch)
+            inputs   = self._to_device_3d(inputs)
+            targets3 = targets3.to(self.device, non_blocking=True).float()
 
-                official = official_dice(pred_np, mask_np)
-                per_class = dice_per_class(pred_np[0], mask_np[0])
-                official_scores.append(official)
-                all_class_dices.append(per_class)
+            inputs_pad, orig_size = self._pad_to_multiple(inputs, multiple=multiple)
+            with autocast('cuda', dtype=self._amp_dtype):
+                logits_pad = self.model(inputs_pad)
+                logits3 = self._crop_to_size(logits_pad, orig_size)
 
-        mean_official = sum(official_scores) / len(official_scores)
-        mean_per_class = torch.tensor(all_class_dices).mean(dim=0).tolist()
+                dice = dice_mean_over_channels(
+                    torch.sigmoid(logits3), targets3, channels=self.active_channels
+                )
+            running_dice += float(dice.item())
+            n += 1
 
-        print(f"\nValidation Dice: {mean_official:.4f}")
-        for i, d in enumerate(mean_per_class):
-            print(f"Class {i}: {d:.4f}")
+        mean_dice = running_dice / max(1, n)
+        print(f"\nValidation (regions) Dice mean over {self.active_channels}: {mean_dice:.4f}")
+        return mean_dice
 
-        return mean_official
+    def _save_checkpoint(self, tag):
+        if not self.save_path:
+            return
+        os.makedirs(self.save_path, exist_ok=True)
+        path = os.path.join(self.save_path, f"{tag}.pt")
+        torch.save(self.model.state_dict(), path)
+        print(f"Checkpoint saved to {path}")
 
-
-    def validate_binary(self, foreground_class=1):
-        self.model.eval()
-        dice_scores = []
-        adjusted_scores = []
-
-        with torch.no_grad():
-            for img, mask, *_ in tqdm(self.val_loader, desc=f"Validating (class {foreground_class})"):
-                img = img.to(self.device)
-                mask_bin = (mask == foreground_class).float().unsqueeze(1).to(self.device)
-
-                pred = self.model(img)
-                pred = torch.sigmoid(pred)
-                pred_bin = (pred > 0.5).float()
-
-                # Klasyczny Dice
-                intersection = (pred_bin * mask_bin).sum()
-                union = pred_bin.sum() + mask_bin.sum()
-                dice = (2 * intersection + 1e-5) / (union + 1e-5)
-                dice_scores.append(dice.item())
-
-                # Adjusted Dice
-                adj_dice = adjusted_binary_dice(pred_bin, mask_bin).mean().item()
-                adjusted_scores.append(adj_dice)
-
-        mean_dice = sum(dice_scores) / len(dice_scores)
-        mean_adjusted = sum(adjusted_scores) / len(adjusted_scores)
-
-        print(f"Validation Binary Dice (class {foreground_class}): {mean_dice:.4f}")
-        print(f"Validation Adjusted Dice (class {foreground_class}): {mean_adjusted:.4f}")
-
-        return mean_dice, mean_adjusted
-
-
-
-
-    def train(self, num_epochs):
+    def train_padded(self, num_epochs, pad_multiple=8):
         for epoch in range(num_epochs):
             self.epoch = epoch
-            train_loss = self.train_one_epoch()
-            print(f"[Epoch {epoch}] Train Loss: {train_loss:.4f}")
+            train_loss = self.train_one_epoch_padded(multiple=pad_multiple)
+            print(f"[Epoch {epoch}] Train Loss (padded): {train_loss:.4f}")
 
             if self.scheduler:
                 self.scheduler.step()
 
-            if self.val_loader:
-                self.validate()
+            val_score = None
+            if self.val_loader and (epoch % self.val_every == 0 or epoch == num_epochs - 1):
+                val_score = self.validate_padded(multiple=pad_multiple)
 
-            if epoch == 9:
-                print("\n[Evaluation before adding class 3 in epoch 10]")
-                self.validate()
+            if epoch % self.save_every == 0 or epoch == num_epochs - 1:
+                self._save_checkpoint(f"epoch_{epoch}")
 
-            if self.save_path:
-                torch.save(
-                    self.model.state_dict(),
-                    os.path.join(self.save_path, f"epoch_{epoch}.pt")
-                )
-
-    def train_binary_dice(self, num_epochs, foreground_class=1):
-        for epoch in range(num_epochs):
-            self.epoch = epoch
-            self.model.train()
-            total_loss = 0
-
-            for img, mask, *_ in tqdm(self.train_loader, desc=f"Binary Training epoch {epoch}"):
-                img = img.to(self.device)
-                mask_bin = (mask == foreground_class).float().unsqueeze(1).to(self.device)
-
-                self.optimizer.zero_grad()
-                with autocast():
-                    pred = self.model(img)
-                    pred = torch.sigmoid(pred)
-                    loss = 1 - adjusted_binary_dice(pred, mask_bin).mean()
-
-                self.scaler.scale(loss).backward()
-                self.scaler.step(self.optimizer)
-                self.scaler.update()
-                total_loss += loss.item()
-
-            avg_loss = total_loss / len(self.train_loader)
-            print(f"[Epoch {epoch}] Adjusted Binary Dice Loss (class {foreground_class}): {avg_loss:.4f}")
-
-            if self.val_loader:
-                dice, adj_dice = self.validate_binary(foreground_class=foreground_class)
-                print(f"[Epoch {epoch}] Binary Dice: {dice:.4f} | Adjusted Dice: {adj_dice:.4f}")
-
-            if self.save_path:
-                torch.save(
-                    self.model.state_dict(),
-                    os.path.join(self.save_path, f"binary_class{foreground_class}_epoch_{epoch}.pt")
-                )
+            if (val_score is not None) and (val_score > self.best_val_dice):
+                self.best_val_dice = val_score
+                self._save_checkpoint("best")
+                print(f"[Epoch {epoch}] New best model saved (Dice={self.best_val_dice:.4f})")

@@ -1,0 +1,85 @@
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+[INFO] Running DDP on 3 GPUs
+[W821 00:11:17.220781704 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W821 00:11:19.948700662 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W821 00:11:19.949365291 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W821 00:11:19.949410380 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W821 00:11:19.085361812 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W821 00:11:19.086476490 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W821 00:11:19.086822950 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+Using device: cuda:0; distributed=True, world_size=3
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 153, in <module>
+[rank0]:     main()
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 110, in main
+[rank0]:     train_loader, val_loader, train_sampler = build_dataloaders(
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 35, in build_dataloaders
+[rank0]:     train_ds = KidneyDataset(train_path)
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py", line 40, in __init__
+[rank0]:     raise FileNotFoundError(
+[rank0]: FileNotFoundError: Found images but could not find any matching label files (*label*.nii.gz) in: /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/cropped_smaller_dataset_z/train
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 153, in <module>
+[rank2]:     main()
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 110, in main
+[rank2]:     train_loader, val_loader, train_sampler = build_dataloaders(
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 35, in build_dataloaders
+[rank2]:     train_ds = KidneyDataset(train_path)
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py", line 40, in __init__
+[rank2]:     raise FileNotFoundError(
+[rank2]: FileNotFoundError: Found images but could not find any matching label files (*label*.nii.gz) in: /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/cropped_smaller_dataset_z/train
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 153, in <module>
+[rank1]:     main()
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 110, in main
+[rank1]:     train_loader, val_loader, train_sampler = build_dataloaders(
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 35, in build_dataloaders
+[rank1]:     train_ds = KidneyDataset(train_path)
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py", line 40, in __init__
+[rank1]:     raise FileNotFoundError(
+[rank1]: FileNotFoundError: Found images but could not find any matching label files (*label*.nii.gz) in: /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/cropped_smaller_dataset_z/train
+[rank0]:[W821 00:11:19.467245547 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0821 00:11:19.970000 592373 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 592379 closing signal SIGTERM
+E0821 00:11:20.002000 592373 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 592378) of binary: /net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/bin/python
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-08-21_00:11:19
+  host      : t0030
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 592380)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-21_00:11:19
+  host      : t0030
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 592378)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

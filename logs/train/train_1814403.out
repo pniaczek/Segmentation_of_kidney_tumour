@@ -1,0 +1,20 @@
+/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+Using device: cuda
+Training mode: multiclass
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train.py", line 201, in <module>
+    main()
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train.py", line 107, in main
+    model = UNet3D(in_channels=1, out_channels=4).to(device).to(memory_format=torch.channels_last)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1320, in convert
+    return t.to(
+RuntimeError: required rank 4 tensor to use channels_last format

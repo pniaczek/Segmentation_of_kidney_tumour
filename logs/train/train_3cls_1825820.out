@@ -1,0 +1,80 @@
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+[INFO] Running DDP on 3 GPUs
+[W820 23:56:52.076034600 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W820 23:56:53.760912260 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W820 23:56:53.767560698 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W820 23:56:54.778752999 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W820 23:56:54.925183865 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W820 23:56:54.925183885 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W820 23:56:54.925401054 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+Using device: cuda:0; distributed=True, world_size=3
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 149, in <module>
+[rank0]:     main()
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 107, in main
+[rank0]:     train_loader, val_loader, train_sampler = build_dataloaders(
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 34, in build_dataloaders
+[rank0]:     train_ds = KidneyDataset(train_path)
+[rank0]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py", line 23, in __init__
+[rank0]:     raise FileNotFoundError(f"No .pt files found in: {folder}")
+[rank0]: FileNotFoundError: No .pt files found in: /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/cropped_smaller_dataset_z/train
+[rank0]:[W820 23:56:54.086425655 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 149, in <module>
+[rank2]:     main()
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 107, in main
+[rank2]:     train_loader, val_loader, train_sampler = build_dataloaders(
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 34, in build_dataloaders
+[rank2]:     train_ds = KidneyDataset(train_path)
+[rank2]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py", line 23, in __init__
+[rank2]:     raise FileNotFoundError(f"No .pt files found in: {folder}")
+[rank2]: FileNotFoundError: No .pt files found in: /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/cropped_smaller_dataset_z/train
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 149, in <module>
+[rank1]:     main()
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 107, in main
+[rank1]:     train_loader, val_loader, train_sampler = build_dataloaders(
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 34, in build_dataloaders
+[rank1]:     train_ds = KidneyDataset(train_path)
+[rank1]:   File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/datasets/kidney_dataset.py", line 23, in __init__
+[rank1]:     raise FileNotFoundError(f"No .pt files found in: {folder}")
+[rank1]: FileNotFoundError: No .pt files found in: /net/tscratch/people/plgmpniak/KITS_project/Kits_23/data/cropped_smaller_dataset_z/train
+W0820 23:56:54.524000 591457 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 591462 closing signal SIGTERM
+W0820 23:56:54.525000 591457 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 591463 closing signal SIGTERM
+E0820 23:56:54.739000 591457 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 591461) of binary: /net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/bin/python
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-20_23:56:54
+  host      : t0030
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 591461)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

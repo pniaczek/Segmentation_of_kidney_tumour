@@ -1,0 +1,65 @@
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_streaming/package_streaming.py:25: UserWarning: zstandard could not be imported. Running without .conda support.
+  warnings.warn("zstandard could not be imported. Running without .conda support.")
+/net/tscratch/people/plgmpniak/miniconda3/lib/python3.13/site-packages/conda_package_handling/api.py:29: UserWarning: Install zstandard Python bindings for .conda support
+  _warnings.warn("Install zstandard Python bindings for .conda support")
+[INFO] Running DDP on 3 GPUs
+[W820 23:49:14.907110058 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 147, in <module>
+Traceback (most recent call last):
+      File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 147, in <module>
+main()Traceback (most recent call last):
+
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 147, in <module>
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 98, in main
+    main()
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 98, in main
+    is_dist, local_rank, world_size = init_distributed_if_needed()
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 15, in init_distributed_if_needed
+    main()
+      File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 98, in main
+is_dist, local_rank, world_size = init_distributed_if_needed()    
+torch.distributed.init_process_group(backend="nccl", timeout=torch.distributed.timedelta(seconds=18000))  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 15, in init_distributed_if_needed
+
+AttributeError:     module 'torch.distributed' has no attribute 'timedelta'is_dist, local_rank, world_size = init_distributed_if_needed()    
+torch.distributed.init_process_group(backend="nccl", timeout=torch.distributed.timedelta(seconds=18000))
+  File "/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py", line 15, in init_distributed_if_needed
+
+AttributeError: module 'torch.distributed' has no attribute 'timedelta'    
+torch.distributed.init_process_group(backend="nccl", timeout=torch.distributed.timedelta(seconds=18000))
+AttributeError: module 'torch.distributed' has no attribute 'timedelta'
+W0820 23:49:16.354000 590445 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 590451 closing signal SIGTERM
+E0820 23:49:16.356000 590445 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 590453) of binary: /net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/bin/python
+Traceback (most recent call last):
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.5.1', 'console_scripts', 'torchrun')())
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/net/tscratch/people/plgmpniak/miniconda3/envs/kits23-unet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/net/tscratch/people/plgmpniak/KITS_project/Kits_23/train/train_3_classes.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-20_23:49:16
+  host      : t0030
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 590453)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

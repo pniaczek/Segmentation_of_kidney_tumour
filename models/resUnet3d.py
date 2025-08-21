@@ -31,7 +31,7 @@ class ResidualBlock(nn.Module):
 
 
 class Residual3DUNet(nn.Module):
-    def __init__(self, in_channels=1, out_channels=4, features=[32, 64, 128, 256]):
+    def __init__(self, in_channels=1, out_channels=4, features=(32, 64, 128, 256)):
         super().__init__()
 
         self.encoder1 = ResidualBlock(in_channels, features[0])
